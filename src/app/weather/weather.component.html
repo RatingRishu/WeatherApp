@@ -1,68 +1,95 @@
-<!-- <a routerLink="home" routerLinkActive="active" ariaCurrentWhenActive="page">Home Component</a> -->
-<div class="Search">
-  <form #form="ngForm" (submit)="onSubmit()">
-    <input type="text"  placeholder="Search City" name="city" [(ngModel)]="city">
-  </form>
-</div>
-<div class="container1">
-  <div class="upper-data">
-    <img src="../assets/hot.jpg" *ngIf="myweather.main.temp_min >20">
-    <img src="../assets/cold.jpg" *ngIf="myweather.main.temp <= 20">
-    <div class="weather-data">
-      <div class="location">
-        {{ this.myweather.name }}
-      </div>
-        <div class="temperature">
-          {{ temperature }}°C
+<div class="whole">
+  <div class="box">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" class="search" placeholder={{cityname}} name="city" [(ngModel)]="city">
+    </form>
+  </div>
+
+  <div class="container" id="wrapper">
+    <div class="container-fluid" id="current-weather">
+      <div class="row">
+        <!-- Right panel -->
+        <!-- <div class="col-xs-6 col-sm-6 col-md-4 row" style="text-align: right;">
+          <img src="../assets/w3.png" class="img2" height="100px">
+        </div> -->
+        <!-- Center panel -->
+        <div class="col-md-8 col-sm-7" style="margin: 10px auto;padding:0;">
+          <div class="row">
+            <h4>{{getCurrentDateTime()}} </h4>
+            <span><p style="font-size: 1.5rem;"><a href="#" class="active" id="celcius"> {{cityname}} &nbsp;
+                &nbsp;{{temperature}}°C</a>   &nbsp;&nbsp;{{description}}</span>
+
+          </div>
         </div>
-      
+
+        <!-- Left panel -->
+        <div class="col-xs-12 col-sm-12 col-md-4 row" style="text-align: right;">
+          <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <h5>Humidity: <span id="humidity"></span>{{humidity}}%</h5>
+          </div>
+          <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <h5>Wind: <span id="wind"></span>{{wind}} m/s</h5>
+          </div>
+          <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <h5>High: <span id="mainTempHot"></span>{{maxtemp}}°</h5>
+          </div>
+          <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+            <h5>Low: <span id="mainTempLow"></span>{{mintemp}}°</h5>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-  <div class="lower-data">
-    <div class="more-info-lable">
-      More Information
-    </div>
-    <div class="more-info-container1">
-      <div class="info-block">
-        <div class="info-block-lable">
-          <img src="../assets/min.png">
-          <span>min </span>
-          <div class="info-block-value">
-            {{ mintemp }}°C
-          </div>
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-lable">
-          <img src="../assets/max.png">
-          <span>max</span>
-          <div class="info-block-value">
-            {{ maxtemp }}°C
-          </div>
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-lable">
-          <img src="../assets/humidity.png">
-          <span>humidity</span>
-          <div class="info-block-value">
-            {{ humidity }}°C
-          </div>
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-lable">
-          <img src="../assets/wind.png">
-          <span>wind</span>
-          <div class="info-block-value">
-            {{ wind }}km/h
+    <!-- 4 days forecast -->
+    <div class="forecastd">
+      <div class="container-fluid">
+        <div class="row" style="padding: 2px;">
+          <div class="nxtday">
+            <!-- Day 1 -->
+            <div class="col-md-6 col-sm-6 day-weather-box">
+              <p id="forecast-day-1-name">&nbsp;{{foredate2}}</p>
+              <div class="row">
+                <h5 id="forecast-day-1-main">{{day2}}°&nbsp;&nbsp;<img src="../assets/w3.png" alt=""></h5>
+              </div>
+            </div>
+            <!-- Day 2 -->
+            <div class="col-md-6 col-sm-6 day-weather-box">
+              <p id="forecast-day-2-name">&nbsp;{{foredate3}}</p>
+              <div class="row">
+                <h5 id="forecast-day-2-main">{{day3}}°&nbsp;&nbsp;<img src="../assets/w3.png" alt=""></h5>
+              </div>
+            </div>
+            <!-- Day 3 -->
+            <div class="col-md-6 col-sm-6 day-weather-box">
+              <p id="forecast-day-3-name">&nbsp;{{foredate4}}</p>
+              <div class="row">
+                <h5 id="forecast-day-3-main">{{day4}}°&nbsp;&nbsp;<img src="../assets/w3.png" alt=""></h5>
+              </div>
+              <!-- <div class="date">
+                {{foredate4}}
+              </div>
+              <div class="temp">
+                {{day4}}
+              </div>
+              <div class="extra">
+                <img src="../assets/w3.png" alt="">
+              </div> -->
+            </div>
+            <!-- Day 4 -->
+            <div class="col-md-6 col-sm-6 day-weather-box">
+              <p id="forecast-day-4-name">&nbsp;{{foredate5}}</p>
+              <div class="row">
+                <h5 id="forecast-day-4-main">{{day5}}°&nbsp;&nbsp;<img src="../assets/w3.png" alt=""></h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
 <router-outlet>
 
 </router-outlet>

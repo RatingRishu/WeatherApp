@@ -1,4 +1,4 @@
-.desktop img{
+/* .desktop img{
     height: fit-content;
     width: 100%;
 }
@@ -23,6 +23,290 @@ body{
     height: 100%;
 } */
 
- .cont{
-    background-color: rgb(0, 91, 170);
- }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap');
+   
+body
+{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url("https://darksoul-codepen.github.io/DarkSoul.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Belanosima', sans-serif;
+    color: #564d93;
+}
+.darksoul-notifications
+{
+    margin: auto;
+    width: 350px;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0.5px 0.5px 2px #ffffff,50px 50px 200px #8677e2,50px 50px 200px #39306e, -0.5px -0.5px 2px #ffffff;
+    border-radius: 0px 10px 0px;
+    backdrop-filter: blur(7px);
+    display: flex;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+   
+}
+.datetime
+{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.datetime h4
+{
+    margin: auto;
+    margin-bottom: 1px;
+    margin-left: 20px;
+}
+.datetime p
+{
+    margin: auto;
+    font-size: 65px;
+    margin-top: 1px;
+}
+.weather
+{
+    margin: auto;
+    margin-right: 0px;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    
+    border-radius: 300px 30px 0px 0px;
+    backdrop-filter: blur(500px);
+    background-color: #ffffff4c;
+}
+.noti-icons
+{
+    width: 100%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+}
+.noti-icons img
+{
+    margin: auto;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px;
+   
+    background-color: rgba(125, 112, 213, 0.663);
+    border-radius: 50%;
+}
+.noti-icons img:hover
+{
+    background-color: #7d70d5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.combine
+{
+    height: 80%;
+    margin: auto;
+    display: flex;
+    width: 70%;
+}
+
+.combine h4
+{
+    margin-top: 1px;
+    margin: auto;
+    color: white;
+}
+.combine img
+{
+    margin-top: 1px;
+    margin: auto;
+}
+@keyframes anim 
+{
+    0%
+    {
+        transform: translateY(0px) translateX(0px);
+    }
+    50%
+    {
+        transform: translateY(10px) translateX(5px);
+    }
+    100%
+    {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+@media only screen and (max-width: 600px) 
+{
+    .darksoul-notifications
+    {
+        margin: auto;
+        width: 90%;
+        height: 20%;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 0.5px 0.5px 2px #ffffff,50px 50px 200px #8677e2,50px 50px 200px #39306e, -0.5px -0.5px 2px #ffffff;
+        border-radius: 0px 10px 0px;
+        backdrop-filter: blur(7px);
+        display: flex;
+        animation-name: anim;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }    
+}
+.disclaimer
+{
+    position: absolute;
+    bottom: 0px; 
+    left: 0; 
+    margin-left: auto; 
+    right: 0; 
+    margin-right: auto; 
+    width: fit-content;
+    color: rgb(0, 0, 0);
+   text-align: center;
+}
+.disclaimer a
+{
+    text-decoration: none;
+    color: #584f95;
+}
+.disclaimer a:hover
+{
+    font-weight: bolder;
+}
+::selection
+{
+    background-color: #453b7b;
+    color: white;
+} */
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+  }
+  
+  a:hover, a:active, a:focus{
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+  
+  .active {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+  
+  body{
+    background-color: #F4F6F7;
+  }
+  
+  #wrapper {
+    background-color: #28688C;
+    box-shadow: 1px 5px 25px 3px #444;
+    border-radius: 0px;
+    width: 100vw;
+    padding: 5px;
+    color: white;  
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://i.postimg.cc/2y8wPwX3/7cd57f8b757aea1e128f2f8f6b2c1983.gif') no-repeat;
+   /* background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  #current-weather{
+    padding: 15px;
+    margin: 50px;
+    border-radius: 10px;    border: 2px solid rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.4);
+   max-width: 1000px;
+    min-width: 500px;
+      border-radius: 10px;
+      z-index: 2;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+  }
+  #mainTemperature{
+    font-size: 5.5em; 
+    line-height: 0.7;
+    
+  }
+  
+  #tempDescription {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .day-weather-box {
+     background-color: #2E7FA1;
+    border-radius: 0px;
+    height: 5em;
+    margin-top: 50px;
+   /* border: 2px solid rgba(0, 0, 0, 0.2);*/
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 0px;
+      z-index: 2;
+     
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    position: relative;
+    
+  }
+  
+  .day-weather-box p{
+    margin-bottom: 0;
+  }
+  
+  .side-weather-info {
+    padding: 0px 10px;
+  }
+  
+  .day-weather-inner-box {
+    display: inline-flex;
+    margin: 14px;
+    padding: 0px 5px;
+  }
+  
+  .forecast-main {
+    padding: 0px 0px 0px 30px;
+  }
+  
+  .forecast-icon {
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  
+  .modal-body p{
+    color: #333;
+  }
+  .container-fluid{
+    background: transparent;
+    margin: 30px;
+    padding: 20px;
+    max-width: 1100px;
+    min-width: 600px;
+  }
